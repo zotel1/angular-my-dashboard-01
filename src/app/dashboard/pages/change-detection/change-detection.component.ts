@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   standalone: true,
   imports: [],
-  templateUrl: './defer-options.component.html',
+  templateUrl: './change-detection.component.html',
   styles: ``
 })
-export class DeferOptionsComponent {
+export default class ChangeDetectionComponent {
 
 }

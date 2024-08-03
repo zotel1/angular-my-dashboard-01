@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   standalone: true,
   imports: [],
-  templateUrl: './control-flow.component.html',
+  templateUrl: './user.component.html',
   styles: ``
 })
-export class ControlFlowComponent {
+export default class UserComponent {
 
 }

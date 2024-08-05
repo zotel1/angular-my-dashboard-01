@@ -18,7 +18,7 @@ export const routes: Routes = [
             },
             {
                 path: 'defer-options',
-                title: 'Defer Option',
+                title: 'Defer Options',
                 loadComponent: () => import('./dashboard/pages/defer-options/defer-options.component'),
             },
             {
@@ -27,13 +27,13 @@ export const routes: Routes = [
                 loadComponent: () => import('./dashboard/pages/defer-views/defer-views.component'),
             },
             {
-                path: 'user',
+                path: 'user/:id',
                 title: 'User',
                 loadComponent: () => import('./dashboard/pages/user/user.component'),
             },
             {
-                path: 'users',
-                title: 'Users',
+                path: 'user-list',
+                title: 'User List',
                 loadComponent: () => import('./dashboard/pages/users/users.component'),
             },
             {

@@ -11,4 +11,14 @@ import { CommonModule } from '@angular/common';
 })
 export class HeavyLoadersSlowComponent {
 
+    constructor() {
+
+        // En la vida real no deberiamos hacer esto
+        const start = Date.now();
+        while( Date.now() - start < 3000) {}
+
+        console.log('Cargado')
+        
+    }
+
 }

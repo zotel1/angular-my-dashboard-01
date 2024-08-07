@@ -33,11 +33,17 @@ export default class ChangeDetectionComponent {
         setTimeout(() => {
 
          //   this.framewokAsProperty.name = 'React';
-         this.framewokAsSignal.update( value => ({
-            ...value,
-            name: 'React'
-         }))
+        
+        // this.framewokAsSignal.update( value => ({
+          //  ...value,
+            //name: 'React'
+        // }))
 
+        this.framewokAsSignal.update( value => {
+            value.name = 'React';
+            return {...value};
+        })
+        
             console.log('Hecho')
         }, 3000);
     }

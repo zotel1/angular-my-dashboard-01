@@ -44,7 +44,12 @@
         <ul>
             @for (framework of frameworks(); track frameworks; 
             let i = $index, first = $first, last = $last, even = $even, odd = $odd, count = $count) {
-            <li [class]="{'bg-red-100': even && !first & !last,'bg-red-100': even && !first & !last,}"> 
+            <li [class]="{
+                'bg-red-100': even && !first & !last,'bg-red-100': even && !first & !last,
+                'bg-pink-100': odd && !first & !last,
+                'bg-blue-100': first || last,
+            
+            }"> 
             {{ i + 1}}/{{ count }} - {{ framework}} </li>
         }
         </ul>

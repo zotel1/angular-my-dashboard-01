@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
+import { User } from '../interfaces/req-response';
 
 interface State {
-    users: any[];
+    users: User[];
     loading: boolean;
 }
 
@@ -10,7 +11,12 @@ interface State {
 })
 export class UsersService {
 
-    
+    #state = signal<State>({
+        loading: true,
+        users: [],
+    })
 
-  constructor() { }
+  constructor() {
+    console.log('Cargando data...')
+   }
 }

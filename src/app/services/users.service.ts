@@ -12,7 +12,7 @@ interface State {
 })
 export class UsersService {
 
-    private http = inject( HttpClient)
+    private http = inject( HttpClient);
 
     #state = signal<State>({
         loading: true,

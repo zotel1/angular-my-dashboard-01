@@ -1,5 +1,5 @@
 import { inject, Injectable, signal } from '@angular/core';
-import { User, UsersResponse } from '@/interfaces/req-response';
+import { User, UsersResponse } from '../interfaces/req-response';
 import { HttpClient } from '@angular/common/http';
 
 interface State {

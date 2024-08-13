@@ -1,5 +1,5 @@
 import { inject, Injectable, signal } from '@angular/core';
-import { User } from '../interfaces/req-response';
+import { User, UsersResponse } from '@/interfaces/req-response';
 import { HttpClient } from '@angular/common/http';
 
 interface State {
@@ -20,6 +20,6 @@ export class UsersService {
     })
 
   constructor() {
-    console.log('Cargando data...')
+    this.http.get<UsersResponse>('https://reqres.in/api/users');
    }
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export default class UserComponent {
+    private route = inject( ActivatedRoute );
 
+    constructor() {
+        console.log()
+    }
 }

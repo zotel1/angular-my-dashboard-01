@@ -1,3 +1,5 @@
+
+
 export interface UsersResponse {
     page:        number;
     per_page:    number;
@@ -17,5 +19,23 @@ export interface User {
 
 export interface Support {
     url:  string;
+    text: string;
+}
+
+export interface USerResponse {
+    date: Data,
+    support: Support;
+}
+
+export interface Data {
+    id: number;
+    email: string;
+    first_name: string;
+    last_name: string;
+    avatar: string;
+}
+
+export interface Support {
+    url: string;
     text: string;
 }

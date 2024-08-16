@@ -16,7 +16,11 @@ import { UsersService } from '@services/users.service';
   @if(user()) {
     <section>
         <img [srcset]="user()!.avatar"
-        [alt]="user()!.first_name">/
+        [alt]="user()!.first_name"/>
+        <div>
+            <h3>{{ user()?.first_name}} {{ user()?.last_name }}</h3>
+            <p>{{ user()?.email}}</p>
+        </div>
     </section>
 
   } @else {<p>Cargando información</p>

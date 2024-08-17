@@ -31,6 +31,13 @@ export default class UserComponent {
     private route = inject( ActivatedRoute );
     private usersService = inject( UsersService);
 
+
+    public user = toSignal(
+        this.route.params.pipe(
+            switchMap(({ id }) => this.usersService.getUserById(id))
+        )
+    )
+
     public titleLabel = computed( () => {
         if (this.user() ) {
             return `Información del usuario ${ this.user()?.first_name } ${ this.user()?.last_name } `;
@@ -44,11 +51,7 @@ export default class UserComponent {
 
    // public user = signal<User | undefined>(undefined)
 
-   public user = toSignal(
-    this.route.params.pipe(
-        switchMap( ({ id }) => this.usersService.getUserById( id ))
-    )
-   )
+   
    // constructor() {
      //   console.log()
    // }
